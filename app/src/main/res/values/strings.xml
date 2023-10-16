@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Expense Manager App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imagelogo">incomeimg</string>
+    <string name="imglogo">expenseimg</string>
+    <string name="imgelogo">allimg</string>
+    <string name="allitem">allItem</string>
+    <string name="expense">Expense</string>
+    <string name="income">Income</string>
+    <string name="total_income">Total Income: $%.2f</string>
+    <string name="total_expense">Total Expense: $%.2f</string>
+    <string name="difference">Difference: $%.2f</string>
+    <string name="_1234">1234</string>
+    <string name="noor">noor</string>
+    <string name="textview">TextView</string>
+
+
+</resources>

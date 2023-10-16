@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/allItemFragment2">
+    <fragment
+        android:id="@+id/allItemFragment2"
+        android:name="com.example.expensemanagerapp.allItemFragment"
+        android:label="fragment_all_item"
+        tools:layout="@layout/fragment_all_item" />
+    <fragment
+        android:id="@+id/salesIncomeFragment2"
+        android:name="com.example.expensemanagerapp.salesIncomeFragment"
+        android:label="fragment_sales_income"
+        tools:layout="@layout/fragment_sales_income" />
+    <fragment
+        android:id="@+id/expenseFragment2"
+        android:name="com.example.expensemanagerapp.expenseFragment"
+        android:label="fragment_expense"
+        tools:layout="@layout/fragment_expense" />
+</navigation>
