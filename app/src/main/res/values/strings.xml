@@ -5,7 +5,7 @@
     <string name="imagelogo">incomeimg</string>
     <string name="imglogo">expenseimg</string>
     <string name="imgelogo">allimg</string>
-    <string name="allitem">allItem</string>
+    <string name="allitem">All</string>
     <string name="expense">Expense</string>
     <string name="income">Income</string>
     <string name="total_income">Total Income: $%.2f</string>
