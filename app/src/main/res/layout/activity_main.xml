@@ -27,7 +27,7 @@
         android:layout_marginBottom="20dp"
         android:clickable="true"
         android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="#D4AADC"
+        app:backgroundTint="#E3C8E8"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.954"

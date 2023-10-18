@@ -16,7 +16,7 @@ import com.example.expensemanagerapp.Model.IncomeEntity
 import com.example.expensemanagerapp.ViewModel.viewModel
 import com.example.expensemanagerapp.databinding.FragmentAllItemBinding
 
-class allItemFragment : Fragment() {
+class AllItemFragment : Fragment() {
     private lateinit var binding: FragmentAllItemBinding
     private lateinit var database: AppDatabase
     private lateinit var Adapter: AllAdapter
@@ -29,7 +29,6 @@ class allItemFragment : Fragment() {
         binding = FragmentAllItemBinding.inflate(inflater, container, false)
         return binding.root
     }
-
     @SuppressLint("NotifyDataSetChanged")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -53,7 +52,6 @@ class allItemFragment : Fragment() {
             Adapter.notifyDataSetChanged()
 
         }
-
         viewModel.alldata.observe(viewLifecycleOwner, allDataObserver)
     }
 }

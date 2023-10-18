@@ -5,7 +5,7 @@
     android:id="@+id/show"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".botttomDailogssFragment">
+    tools:context=".BotttomDailogsFragment">
 
     <TextView
         android:id="@+id/textView3"
@@ -86,10 +86,9 @@
         android:id="@+id/save_im"
         android:layout_width="56dp"
         android:layout_height="36dp"
-        android:layout_marginStart="104dp"
         android:layout_marginTop="12dp"
         android:src="@drawable/circlebookmark"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Amount_tv"
         app:layout_constraintTop_toBottomOf="@+id/Amount_tv" />
 
     <ImageView

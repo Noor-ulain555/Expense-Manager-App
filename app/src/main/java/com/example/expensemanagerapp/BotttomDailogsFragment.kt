@@ -21,7 +21,7 @@ import kotlinx.coroutines.launch
 import java.text.DateFormat
 import java.util.Calendar
 
-class botttomDailogssFragment : BottomSheetDialogFragment() {
+class BotttomDailogsFragment : BottomSheetDialogFragment() {
 
     private lateinit var binding: FragmentBotttomDailogssBinding
     private val viewModel: viewModel by viewModels()
@@ -33,13 +33,17 @@ class botttomDailogssFragment : BottomSheetDialogFragment() {
         binding = FragmentBotttomDailogssBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     @SuppressLint("SuspiciousIndentation")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-  database = Room.databaseBuilder(requireContext(),
-      AppDatabase::class.java, "my-database").build()
+        database = Room.databaseBuilder(
+            requireContext(),
+            AppDatabase::class.java, "my-database"
+        ).build()
         binding.date.setOnClickListener {
-            showDatePickerDialog() }
+            showDatePickerDialog()
+        }
         binding.saveIm.setOnClickListener {
             val name = binding.nameTv.text.toString()
             val amount = binding.AmountTv.text.toString().toDouble()
@@ -49,24 +53,18 @@ class botttomDailogssFragment : BottomSheetDialogFragment() {
             if (isIncome || isExpense) {
                 if (name.isNotEmpty() && amount > 0 && date.isNotEmpty()) {
                     lifecycleScope.launch(Dispatchers.IO) {
-                        if (isIncome) {
-                            database.getIDao().insert(IncomeEntity(name, amount, true, date))
-                            val item = IncomeEntity(name, amount, true, date)
-                            viewModel.insertIncome(item)
-                        } else if (isExpense) {
-                            database.getIDao().insert(IncomeEntity(name, amount, false,date))
-                            val item = IncomeEntity(name, amount, false,date)
-                            viewModel.insertIncome(item)
-                        }
-
-                        Log.d("dataSaver", "Data saved")
+                        val item = IncomeEntity(name, amount, isIncome, date)
+                        viewModel.insertIncome(item)
                     }
                     dismiss()
-
                 } else {
-                    Toast.makeText(requireContext(), "Please fill in all fields", Toast.LENGTH_SHORT).show() }
+                    Toast.makeText(requireContext(), "Please fill in all fields", Toast.LENGTH_SHORT).show()
+                }
             } else {
-                Toast.makeText(requireContext(), "Please select either Income or Expense", Toast.LENGTH_SHORT).show() } } }
+                Toast.makeText(requireContext(), "Please select either Income or Expense", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
     private fun showDatePickerDialog() {
         val c = Calendar.getInstance()
         val year = c.get(Calendar.YEAR)
@@ -79,7 +77,8 @@ class botttomDailogssFragment : BottomSheetDialogFragment() {
                 c.set(year, monthOfYear, dayOfMonth)
                 val selectedDate = DateFormat.getDateInstance().format(c.time)
                 binding.dateI.text = selectedDate
-            }, year, month, day)
+            }, year, month, day
+        )
         datePickerDialog.show()
     }
 }

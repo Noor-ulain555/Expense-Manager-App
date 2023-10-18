@@ -7,15 +7,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.expensemanagerapp.Model.IncomeEntity
 import com.example.expensemanagerapp.databinding.ExpenseSampleBinding
 
-class expenseAdapter(private val context: Context, private var expenseList: List<IncomeEntity>) :
-    RecyclerView.Adapter<expenseAdapter.ViewHolder>() {
+class ExpenseAdapter(private val context: Context, private var expenseList: List<IncomeEntity>) :
+    RecyclerView.Adapter<ExpenseAdapter.ViewHolder>() {
     class ViewHolder(val binding: ExpenseSampleBinding) : RecyclerView.ViewHolder(binding.root)
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = ExpenseSampleBinding.inflate(LayoutInflater.from(context), parent, false)
         return ViewHolder(view)
     }
-
     override fun getItemCount(): Int {
         return expenseList.size
     }

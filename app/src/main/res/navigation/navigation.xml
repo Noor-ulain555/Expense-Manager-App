@@ -6,17 +6,17 @@
     app:startDestination="@id/allItemFragment2">
     <fragment
         android:id="@+id/allItemFragment2"
-        android:name="com.example.expensemanagerapp.allItemFragment"
+        android:name="com.example.expensemanagerapp.AllItemFragment"
         android:label="fragment_all_item"
         tools:layout="@layout/fragment_all_item" />
     <fragment
         android:id="@+id/salesIncomeFragment2"
-        android:name="com.example.expensemanagerapp.salesIncomeFragment"
+        android:name="com.example.expensemanagerapp.IncomeFragment"
         android:label="fragment_sales_income"
         tools:layout="@layout/fragment_sales_income" />
     <fragment
         android:id="@+id/expenseFragment2"
-        android:name="com.example.expensemanagerapp.expenseFragment"
+        android:name="com.example.expensemanagerapp.ExpenseFragment"
         android:label="fragment_expense"
         tools:layout="@layout/fragment_expense" />
 </navigation>

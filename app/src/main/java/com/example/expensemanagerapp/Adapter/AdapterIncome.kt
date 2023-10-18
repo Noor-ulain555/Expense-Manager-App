@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.expensemanagerapp.databinding.IncomeSampleBinding
 
-class adapterincome(private val context: Context, private var incomeList: List<IncomeEntity>) :
-    RecyclerView.Adapter<adapterincome.ViewHolder>() {
+class AdapterIncome(private val context: Context, private var incomeList: List<IncomeEntity>) :
+    RecyclerView.Adapter<AdapterIncome.ViewHolder>() {
     class ViewHolder(val binding: IncomeSampleBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
